@@ -12,7 +12,7 @@
         },
         "_artifactsLocation": {
             "type": "string",
-            "defaultValue": "https://github.com/Azure-Praecipio/atlassian-azure-jira-deployment/blob/",
+            "defaultValue": "https://raw.githubusercontent.com/Azure-Praecipio/atlassian-azure-jira-deployment/main",
             "metadata": {
                 "description": "The URL specifying the location of the installation files."
             }
@@ -521,10 +521,10 @@
         }
     },
     "variables": {
-        "vpcTemplateUri": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/azuredeploy-vpc.json', parameters('_artifactsLocationSasToken')))]",
-        "jiraTemplateUri": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/azuredeploy-jira.json', parameters('_artifactsLocationSasToken')))]",
-        "domainTemplateUri": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/azuredeploy-domain.json', parameters('_artifactsLocationSasToken')))]",
-        "alertsTemplateUri": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/azuredeploy-alerts.json', parameters('_artifactsLocationSasToken')))]",
+        "vpcTemplateUri": "[uri(parameters('_artifactsLocation'), concat('main/nestedtemplates/azuredeploy-vpc.json', parameters('_artifactsLocationSasToken')))]",
+        "jiraTemplateUri": "[uri(parameters('_artifactsLocation'), concat('main/nestedtemplates/azuredeploy-jira.json', parameters('_artifactsLocationSasToken')))]",
+        "domainTemplateUri": "[uri(parameters('_artifactsLocation'), concat('main/nestedtemplates/azuredeploy-domain.json', parameters('_artifactsLocationSasToken')))]",
+        "alertsTemplateUri": "[uri(parameters('_artifactsLocation'), concat('main/nestedtemplates/azuredeploy-alerts.json', parameters('_artifactsLocationSasToken')))]",
         "namespace": "jira",
         "dbServerName": "[concat(variables('namespace'), if(equals(parameters('dbType'),'Azure SQL DB'),'sqlserver','postgres'), uniqueString(resourceGroup().id))]",
         "isJiraProduct": "[equals(parameters('jiraProduct'), 'jira-software')]",
