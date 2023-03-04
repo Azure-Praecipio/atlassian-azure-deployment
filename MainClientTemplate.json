@@ -12,7 +12,7 @@
         },
         "_artifactsLocation": {
             "type": "string",
-            "defaultValue": "https://github.com/Azure-Praecipio/atlassian-azure-jira-deployment/tree/main/",
+            "defaultValue": "https://github.com/Azure-Praecipio/atlassian-azure-jira-deployment/blob/",
             "metadata": {
                 "description": "The URL specifying the location of the installation files."
             }
